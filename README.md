@@ -18,7 +18,7 @@
 ```powershell
     gnome-terminal
 ```
-6. Some gnoem app requires dbus to work. If you faile to start gnome app, start dbus then start application. 
+6. Some gnome app requires dbus to work. If you faile to start gnome app, start dbus then start application. 
 ```powershell
    sudo service dbus enable
    gnome-control-center
