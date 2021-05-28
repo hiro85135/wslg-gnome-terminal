@@ -4,28 +4,22 @@
 ```powershell
    sudo apt install ubuntu-desktop gnome
 ```
-3. Start dbus
-```powershell
-   sudo mkdir -p /run/dbus
-   sudo dbus-daemon --system
-```
-4. Add these lines in ~/.bashrc
+3. Add these lines in ~/.bashrc
 ```
    export GTK_IM_MODULE=ibus
    export XMODIFIERS=@im=ibus
    export QT_IM_MODULE=ibus
 ```
-5. Shut down wsl
+4. Shut down wsl
 ```powershell
     wsl --shutdown
 ```
-6. Start up Ubuntu and start gnome-terminal
+5. Start up Ubuntu and start gnome-terminal
 ```powershell
     gnome-terminal
 ```
-
-* reference
-
-https://github.com/microsoft/wslg
-
-https://github.com/Microsoft/WSL/issues/2941
+6. Some gnoem app requires dbus to work. If you faile to start gnome app, start dbus then start application. 
+```powershell
+   sudo service dbus enable
+   gnome-control-center
+```
